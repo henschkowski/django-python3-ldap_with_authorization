@@ -109,6 +109,26 @@ Available settings
     # Set connection pool `active` parameter on the underlying `ldap3` library.
     LDAP_AUTH_POOL_ACTIVE = True
 
+
+    # Following three settings to configure a second LDAP call to
+    # determine group/role membership. If your user search contains group
+    # memberships as detailed below (Custom user filters), you do not
+    # need this.
+
+    import ldap3
+
+    # Search base for roles. Set to None to disable authorization
+    LDAP_ATZ_SEARCH_BASE = "ou=Netgroup,dc=sss,dc=example.com"
+
+    # Filter expression. You can use the {username} in the format string
+    LDAP_ATZ_FILTER = "(&(cn=RF_ODS_AM_SBX_L2_TST)(nisNetgroupTriple=*,{username},*))"
+
+    # Additional parameters for the LDAP search call
+    LDAP_ATZ_PARAMS = {"search_scope": ldap3.LEVEL, "attributes": ldap3.ALL_ATTRIBUTES}
+
+
+
+    
 Microsoft Active Directory support
 ----------------------------------
 
