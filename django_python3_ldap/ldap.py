@@ -128,7 +128,7 @@ class Connection(object):
                                                  **settings.LDAP_ATZ_PARAMS)
                 if not result:
                     return None
-            
+
             return self._get_or_create_user(user_data)
         logger.warning("LDAP user lookup failed")
         return None
