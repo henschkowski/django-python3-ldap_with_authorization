@@ -162,4 +162,19 @@ class LazySettings(object):
     )
 
 
+    LDAP_ATZ_SEARCH_BASE = LazySetting(
+        name="LDAP_ATZ_SEARCH_BASE",
+        default=True
+    )
+
+    LDAP_ATZ_FILTER = LazySetting(
+        name="LDAP_ATZ_FILTER",
+        default=True
+    )
+
+    LDAP_ATZ_PARAMS = LazySetting(
+        name="LDAP_ATZ_PARAMS",
+        default=True
+    )
+
 settings = LazySettings(settings)

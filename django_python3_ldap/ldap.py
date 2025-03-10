@@ -117,7 +117,18 @@ class Connection(object):
         """
         # Search the LDAP database.
         if self.has_user(**kwargs):
-            return self._get_or_create_user(self._connection.response[0])
+
+            # Save response data - otherwise the next LDAP call would overwrite it
+            user_data = self._connection.response[0]
+            
+            # User is authenticated. Now check it is authorized
+            result = self._connection.search(settings.LDAP_ATZ_SEARCH_BASE,
+                                             settings.LDAP_ATZ_FILTER.format(**kwargs),
+                                             **settings.LDAP_ATZ_PARAMS)
+            if not result:
+                return None
+            
+            return self._get_or_create_user(user_data)
         logger.warning("LDAP user lookup failed")
         return None
 
