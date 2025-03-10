@@ -11,7 +11,7 @@ with open("README.rst", "r", encoding="utf-8") as fh:
 
 
 setup(
-    name="django-python3-ldap",
+    name="django-python3-ldap-with-atz",
     version=version_str,
     license="BSD",
     description="Django LDAP user authentication backend for Python 3., with extra Authorization",
