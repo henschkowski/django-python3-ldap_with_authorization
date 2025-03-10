@@ -164,17 +164,17 @@ class LazySettings(object):
 
     LDAP_ATZ_SEARCH_BASE = LazySetting(
         name="LDAP_ATZ_SEARCH_BASE",
-        default=True
+        default=None
     )
 
     LDAP_ATZ_FILTER = LazySetting(
         name="LDAP_ATZ_FILTER",
-        default=True
+        default=None
     )
 
     LDAP_ATZ_PARAMS = LazySetting(
         name="LDAP_ATZ_PARAMS",
-        default=True
+        default=None
     )
 
 settings = LazySettings(settings)
