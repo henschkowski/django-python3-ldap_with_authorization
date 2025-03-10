@@ -14,11 +14,11 @@ setup(
     name="django-python3-ldap",
     version=version_str,
     license="BSD",
-    description="Django LDAP user authentication backend for Python 3.",
+    description="Django LDAP user authentication backend for Python 3., with extra Authorization",
     long_description=long_description,
     author="Dave Hall",
     author_email="dave@etianen.com",
-    url="https://github.com/etianen/django-python3-ldap",
+    url="https://github.com/henschkowski/django-python3-ldap_with_authorization",
     packages=find_packages(),
     install_requires=[
         "django>=1.11",
