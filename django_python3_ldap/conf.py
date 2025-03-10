@@ -178,4 +178,3 @@ class LazySettings(object):
 
 
 settings = LazySettings(settings)
-

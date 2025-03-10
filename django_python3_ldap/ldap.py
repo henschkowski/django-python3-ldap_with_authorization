@@ -120,7 +120,7 @@ class Connection(object):
 
             # Save response data - otherwise the next LDAP call would overwrite it
             user_data = self._connection.response[0]
-            
+
             # User is authenticated. Now check it is authorized
             if settings.LDAP_ATZ_SEARCH_BASE:
                 result = self._connection.search(settings.LDAP_ATZ_SEARCH_BASE,
