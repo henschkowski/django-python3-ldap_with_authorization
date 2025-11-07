@@ -1,7 +1,10 @@
 django-python3-ldap
 ===================
 
-**django-python3-ldap** provides a Django LDAP user authentication backend. Python 3.6+ is required.
+**django-python3-ldap-with-atz** provides a Django LDAP user
+ authentication backend that is based on **django-python3-ldap**, with
+ some lines added for authorization using LDAP roles/groups. Python
+ 3.6+ is required.
 
 
 Features
@@ -10,12 +13,13 @@ Features
 - Authenticate users with an LDAP server.
 - Sync LDAP users with a local Django database.
 - Supports custom Django user models.
+- Authorize a user based on its groups / roles in LDAP
 
 
 Installation
 ------------
 
-1. Install using ``pip install django-python3-ldap``.
+1. Install using ``pip install django-python3-ldap-with-atz``.
 2. Add ``'django_python3_ldap'`` to your ``INSTALLED_APPS`` setting.
 3. Set your ``AUTHENTICATION_BACKENDS`` setting to ``("django_python3_ldap.auth.LDAPBackend",)``
 4. Configure the settings for your LDAP server(s) (see Available settings, below).
@@ -110,6 +114,10 @@ Available settings
     LDAP_AUTH_POOL_ACTIVE = True
 
 
+    
+    # Authorization
+    # -------------
+    # 
     # Following three settings to configure a second LDAP call to
     # determine group/role membership. If your user search contains group
     # memberships as detailed below (Custom user filters), you do not
@@ -286,14 +294,18 @@ Support and announcements
 -------------------------
 
 Downloads and bug tracking can be found at the `main project
-website <http://github.com/etianen/django-python3-ldap>`_.
+website <bitshttps://github.com/henschkowski/django-python3-ldap_with_authorization`_.
 
 
 More information
 ----------------
 
+The authorization bits that form django-python3-ldap-with-atz were added by me, Ralf Henschkowski. You can get the code
+from the `django-python3-ldap-with-atz project site <https://github.com/henschkowski/django-python3-ldap_with_authorization>`_.
+
 The django-python3-ldap project was developed by Dave Hall. You can get the code
 from the `django-python3-ldap project site <http://github.com/etianen/django-python3-ldap>`_.
+
 
 Dave Hall is a freelance web developer, based in Cambridge, UK. You can usually
 find him on the Internet in a number of different places:
