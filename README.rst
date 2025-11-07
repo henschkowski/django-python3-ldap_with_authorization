@@ -1,5 +1,5 @@
-django-python3-ldap
-===================
+django-python3-ldap-with-atz
+============================
 
 **django-python3-ldap-with-atz** provides a Django LDAP user
  authentication backend that is based on **django-python3-ldap**, with
