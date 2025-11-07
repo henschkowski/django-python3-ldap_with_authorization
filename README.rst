@@ -1,10 +1,7 @@
 django-python3-ldap-with-atz
 ============================
 
-**django-python3-ldap-with-atz** provides a Django LDAP user
- authentication backend that is based on **django-python3-ldap**, with
- some lines added for authorization using LDAP roles/groups. Python
- 3.6+ is required.
+**django-python3-ldap-with-atz** provides a Django LDAP user  authentication backend that is based on **django-python3-ldap**, with some lines added for authorization using LDAP roles/groups. Python 3.6+ is required.
 
 
 Features
@@ -293,8 +290,8 @@ keep all users in sync on a regular basis.
 Support and announcements
 -------------------------
 
-Downloads and bug tracking can be found at the `main project
-website <bitshttps://github.com/henschkowski/django-python3-ldap_with_authorization`_.
+Downloads and bug tracking can be found at the main project
+website `<https://github.com/henschkowski/django-python3-ldap_with_authorization>`_.
 
 
 More information
